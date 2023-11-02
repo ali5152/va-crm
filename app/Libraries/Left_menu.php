@@ -272,30 +272,30 @@ class Left_menu {
 
 
 
-            // if ($this->ci->login_user->is_admin || get_array_value($this->ci->login_user->permissions, "can_manage_all_kinds_of_settings")) {
-            //     $sidebar_menu["settings"] = array("name" => "settings", "url" => "settings/general", "class" => "settings",
-            //         "sub_pages" => array(
-            //             "email_templates/index",
-            //             "left_menu/index",
-            //             "updates/index",
-            //             "roles/index",
-            //             "roles/user_roles",
-            //             "team/index",
-            //             "dashboard/client_default_dashboard",
-            //             "left_menus/index",
-            //             "company/index",
-            //             "item_categories/index",
-            //             "payment_methods/index",
-            //             "custom_fields/view",
-            //             "client_groups/index",
-            //             "expense_categories/index",
-            //             "leave_types/index",
-            //             "ticket_types/index",
-            //             "lead_status/index",
-            //             "pages/index",
-            //             "plugins/index"
-            //     ));
-            // }
+            if ($this->ci->login_user->is_admin || get_array_value($this->ci->login_user->permissions, "can_manage_all_kinds_of_settings")) {
+                $sidebar_menu["settings"] = array("name" => "settings", "url" => "settings/general", "class" => "settings",
+                    "sub_pages" => array(
+                        "email_templates/index",
+                        "left_menu/index",
+                        "updates/index",
+                        "roles/index",
+                        "roles/user_roles",
+                        "team/index",
+                        "dashboard/client_default_dashboard",
+                        "left_menus/index",
+                        "company/index",
+                        "item_categories/index",
+                        "payment_methods/index",
+                        "custom_fields/view",
+                        "client_groups/index",
+                        "expense_categories/index",
+                        "leave_types/index",
+                        "ticket_types/index",
+                        "lead_status/index",
+                        "pages/index",
+                        "plugins/index"
+                ));
+            }
 
             $sidebar_menu = app_hooks()->apply_filters('app_filter_staff_left_menu', $sidebar_menu);
         } else {

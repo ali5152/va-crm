@@ -1,7 +1,8 @@
 <input type="hidden" name="id" value="<?php echo $model_info->id; ?>" />
 <input type="hidden" name="view" value="<?php echo isset($view) ? $view : ""; ?>" />
-
-<div class="form-group">
+<input type="hidden" name="account_type" value="person"/>
+<?php $model_info->type = "person" ?>
+<!-- <div class="form-group">
     <div class="row">
         <label for="type" class="<?php echo $label_column; ?>"><?php echo app_lang('type'); ?></label>
         <div class="<?php echo $field_column; ?>">
@@ -18,6 +19,7 @@
             echo form_radio(array(
                 "id" => "type_person",
                 "name" => "account_type",
+                "checked" => "checked",
                 "class" => "form-check-input account_type",
                 "data-msg-required" => app_lang("field_required"),
                     ), "person", ($model_info->type === "person") ? true : false);
@@ -25,7 +27,7 @@
             <label for="type_person" class=""><?php echo app_lang('person'); ?></label>
         </div>
     </div>
-</div>
+</div> -->
 
 <?php if ($model_info->id) { ?>
     <div class="form-group">
@@ -86,6 +88,7 @@
                     "name" => "created_by",
                     "value" => $model_info->created_by ? $model_info->created_by : $login_user->id,
                     "class" => "form-control",
+                    "readonly" => "true",
                     "placeholder" => app_lang('owner'),
                     "data-rule-required" => true,
                     "data-msg-required" => app_lang("field_required")

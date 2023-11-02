@@ -832,6 +832,42 @@ class Clients extends Security_Controller {
         return $this->template->view("clients/contacts/index", $view_data);
     }
 
+        function activity($client_id = 0) {
+        $this->_validate_client_view_access($client_id);
+
+        if ($client_id) {
+            $view_data["client_id"] = clean_data($client_id);
+            $view_data["view_type"] = "";
+        } else {
+            $view_data["client_id"] = "";
+            $view_data["view_type"] = "list_view";
+        }
+        $view_data["custom_field_headers"] = $this->Custom_fields_model->get_custom_field_headers_for_table("client_contacts", $this->login_user->is_admin, $this->login_user->user_type);
+        $view_data["custom_field_filters"] = $this->Custom_fields_model->get_custom_field_filters("client_contacts", $this->login_user->is_admin, $this->login_user->user_type);
+
+        $view_data['can_edit_clients'] = $this->can_edit_clients();
+
+        return $this->template->view("clients/activity/index", $view_data);
+    }
+
+ function emails($client_id = 0) {
+        $this->_validate_client_view_access($client_id);
+
+        if ($client_id) {
+            $view_data["client_id"] = clean_data($client_id);
+            $view_data["view_type"] = "";
+        } else {
+            $view_data["client_id"] = "";
+            $view_data["view_type"] = "list_view";
+        }
+        $view_data["custom_field_headers"] = $this->Custom_fields_model->get_custom_field_headers_for_table("client_contacts", $this->login_user->is_admin, $this->login_user->user_type);
+        $view_data["custom_field_filters"] = $this->Custom_fields_model->get_custom_field_filters("client_contacts", $this->login_user->is_admin, $this->login_user->user_type);
+
+        $view_data['can_edit_clients'] = $this->can_edit_clients();
+
+        return $this->template->view("clients/emails/index", $view_data);
+    }
+
     /* contact add modal */
 
     function add_new_contact_modal_form() {

@@ -55,7 +55,7 @@ $lang["income_vs_expenses"] = "Income vs Expenses";
 $lang["title"] = "Title";
 $lang["reset"] = "Reset";
 $lang["share_with"] = "Share with";
-$lang["company_name"] = "Company name";
+$lang["company_name"] = "Name";
 $lang["address"] = "Address";
 $lang["city"] = "City";
 $lang["state"] = "State";
@@ -328,10 +328,10 @@ $lang["due"] = "Due";
 $lang["add_contact"] = "Add contact";
 $lang["edit_contact"] = "Edit contact";
 $lang["delete_contact"] = "Delete contact";
-$lang["contact"] = "Contact";
-$lang["contacts"] = "Contacts";
+$lang["contact"] = "Login";
+$lang["contacts"] = "Logins";
 $lang["users"] = "Users";
-$lang["primary_contact"] = "Primary contact";
+$lang["primary_contact"] = "Primary Login";
 $lang["disable_login"] = "Disable login";
 $lang["disable_login_help_message"] = "The user will not be able to login in this system!";
 $lang["email_login_details"] = "Email login details to this user";
@@ -692,7 +692,7 @@ $lang["ticket_closed"] = "Ticket closed";
 $lang["ticket_reopened"] = "Ticket reopened";
 $lang["leave"] = "Leave";
 
-$lang["client_primary_contact"] = "Primary contact of client";
+$lang["client_primary_contact"] = "Primary login of client";
 $lang["client_all_contacts"] = "All contacts of client";
 $lang["task_assignee"] = "Task assignee";
 $lang["task_collaborators"] = "Task collaborators";
@@ -1043,7 +1043,7 @@ $lang["add_a_todo"] = "Add a to do...";
 
 /* Version 1.9 */
 
-$lang["client_groups"] = "Client groups";
+$lang["client_groups"] = "Client group";
 $lang["add_client_group"] = "Add client group";
 $lang["edit_client_group"] = "Edit client group";
 $lang["delete_client_group"] = "Delete client group";
@@ -1191,7 +1191,7 @@ $lang["setup"] = "Setup";
 $lang["client_permissions"] = "Client permissions";
 
 $lang["invoice_over_payment_error_message"] = "You can't pay more than your invoice due.";
-$lang["account_already_exists_for_your_company_name"] = "Account already exists for your company name.";
+$lang["account_already_exists_for_your_company_name"] = "Account already exists for your for name.";
 $lang["personal_language"] = "Personal language";
 $lang["no_messages_text"] = "You don't have any messages yet";
 $lang["no_users_found"] = "No users found";
@@ -1334,7 +1334,7 @@ $lang["lead_status"] = "Lead status";
 $lang["add_lead_status"] = "Add lead status";
 $lang["edit_lead_status"] = "Edit lead status";
 $lang["delete_lead_status"] = "Delete lead status";
-$lang["owner"] = "Owner";
+$lang["owner"] = "Added By";
 $lang["make_client"] = "Make client";
 $lang["client_contacts"] = "Client contacts";
 $lang["lead_contacts"] = "Lead contacts";
@@ -1370,7 +1370,7 @@ $lang["please_upload_a_excel_file"] = "Please upload a excel file.";
 $lang["back"] = "Back";
 
 $lang["import_client_error_header"] = "There has an invalid header. The indicated field should be <b>%s</b>.";
-$lang["import_client_error_company_name_field_required"] = "Company name field is required.";
+$lang["import_client_error_company_name_field_required"] = "Name field is required.";
 $lang["import_client_error_contact_name"] = "Contact first name and last name is both required to add a client contact.";
 $lang["import_client_error_contact_email"] = "Contact email is required and should be unique to add a client contact.";
 $lang["error"] = "Error";
@@ -2237,7 +2237,7 @@ $lang["other"] = "Other";
 
 $lang["print_estimate"] = "Print estimate";
 
-$lang["the_person_who_will_manage_this_client"] = "The person who'll manage this client.";
+$lang["the_person_who_will_manage_this_client"] = "Readonly! The person who'll manage this client.";
 $lang["the_person_who_will_manage_this_lead"] = "The person who'll manage this lead.";
 
 $lang["language_key"] = "Language Key";

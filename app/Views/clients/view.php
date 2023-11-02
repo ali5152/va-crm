@@ -47,6 +47,10 @@
                 </div>
 
                 <ul id="client-tabs" data-bs-toggle="ajax-tab" class="nav nav-tabs scrollable-tabs" role="tablist">
+                      <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/activity/" . $client_info->id); ?>" data-bs-target="#client-activity"> Activity</a></li>
+                        <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/emails/" . $client_info->id); ?>" data-bs-target="#client-emails">Emails</a></li>
+
+
                     <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/contacts/" . $client_info->id); ?>" data-bs-target="#client-contacts"> <?php echo app_lang('contacts'); ?></a></li>
                     <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/company_info_tab/" . $client_info->id); ?>" data-bs-target="#client-info"> <?php echo app_lang('client_info'); ?></a></li>
 
@@ -61,13 +65,13 @@
                         <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/payments/" . $client_info->id); ?>" data-bs-target="#client-payments"> <?php echo app_lang('payments'); ?></a></li>
                     <?php } ?>
                     <?php if ($show_estimate_info) { ?>
-                        <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/estimates/" . $client_info->id); ?>" data-bs-target="#client-estimates"> <?php echo app_lang('estimates'); ?></a></li>
+                        <!-- <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/estimates/" . $client_info->id); ?>" data-bs-target="#client-estimates"> <?php echo app_lang('estimates'); ?></a></li> -->
                     <?php } ?>
                     <?php if ($show_order_info) { ?>
-                        <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/orders/" . $client_info->id); ?>" data-bs-target="#client-orders"> <?php echo app_lang('orders'); ?></a></li>
+                      <!--   <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/orders/" . $client_info->id); ?>" data-bs-target="#client-orders"> <?php echo app_lang('orders'); ?></a></li> -->
                     <?php } ?>
                     <?php if ($show_estimate_request_info) { ?>
-                        <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/estimate_requests/" . $client_info->id); ?>" data-bs-target="#client-estimate-requests"> <?php echo app_lang('estimate_requests'); ?></a></li>
+                       <!--  <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/estimate_requests/" . $client_info->id); ?>" data-bs-target="#client-estimate-requests"> <?php echo app_lang('estimate_requests'); ?></a></li> -->
                     <?php } ?>
                     <?php if ($show_contract_info) { ?>
                         <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/contracts/" . $client_info->id); ?>" data-bs-target="#client-contracts"> <?php echo app_lang('contracts'); ?></a></li>
@@ -103,6 +107,8 @@
                     ?>
                 </ul>
                 <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade" id="client-activity"></div>
+                    <div role="tabpanel" class="tab-pane fade" id="client-emails"></div>
                     <div role="tabpanel" class="tab-pane fade" id="client-projects"></div>
                     <div role="tabpanel" class="tab-pane fade" id="client-tasks"></div>
                     <div role="tabpanel" class="tab-pane fade" id="client-files"></div>
