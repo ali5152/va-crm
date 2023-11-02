@@ -1,5 +1,1 @@
-/app/Config/*
-/system/*
-/assets/*
-.env
-/app/ThirdParty
+/app/Config/Database.php
