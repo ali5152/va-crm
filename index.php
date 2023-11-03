@@ -1,4 +1,4 @@
-<?php
+ed<?php
 
 // Valid PHP Version?
 $minPHPVersion = '8.1';
