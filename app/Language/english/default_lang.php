@@ -770,8 +770,8 @@ $lang["estimates"] = "Enquires";
 $lang["estimate_request"] = "Enquire Request";
 $lang["estimate_requests"] = "Enquire Requests";
 $lang["estimate_list"] = "Enquire List";
-$lang["estimate_forms"] = "Enquire Forms";
-$lang["estimate_request_forms"] = "Enquire Request Forms";
+$lang["estimate_forms"] = "Jotform";
+$lang["estimate_request_forms"] = "Request Forms";
 
 $lang["add_form"] = "Add form";
 $lang["edit_form"] = "Edit form";
@@ -1385,7 +1385,7 @@ $lang["copy_discount"] = "Copy discount";
 $lang["clone_task"] = "Clone task";
 $lang["copy_checklist"] = "Copy checklist";
 
-$lang["auto_assign_estimate_request_to"] = "Auto assign estimate request to";
+$lang["auto_assign_estimate_request_to"] = "Auto assign lead to";
 
 $lang["email_template_variable"] = "Email template variable";
 $lang["example_variable_name"] = "Example_variable_name";
@@ -1952,8 +1952,8 @@ $lang["notification_invoice_manual_payment_added"] = "Added a manual payment.";
 $lang["save_as_note"] = "Save as note";
 $lang["client_will_not_see_any_notes"] = "Client will not see any notes.";
 
-$lang["prospects"] = "Enquires";
-$lang["estimate_forms"] = "Enquire Forms";
+$lang["prospects"] = "Jotforms";
+$lang["estimate_forms"] = "Jotforms List";
 
 $lang["proposal_editor"] = "Quotation Editor";
 $lang["proposal_templates"] = "Quotation templates";

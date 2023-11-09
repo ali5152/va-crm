@@ -49,6 +49,7 @@
                 <ul id="client-tabs" data-bs-toggle="ajax-tab" class="nav nav-tabs scrollable-tabs" role="tablist">
                       <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/activity/" . $client_info->id); ?>" data-bs-target="#client-activity"> Activity</a></li>
                         <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/emails/" . $client_info->id); ?>" data-bs-target="#client-emails">Emails</a></li>
+                          <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/whatsapp/" . $client_info->id); ?>" data-bs-target="#client-whatsapp">Whatsapp</a></li>
 
 
                     <li><a  role="presentation" data-bs-toggle="tab" href="<?php echo_uri("clients/contacts/" . $client_info->id); ?>" data-bs-target="#client-contacts"> <?php echo app_lang('contacts'); ?></a></li>
@@ -109,6 +110,7 @@
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane fade" id="client-activity"></div>
                     <div role="tabpanel" class="tab-pane fade" id="client-emails"></div>
+                    <div role="tabpanel" class="tab-pane fade" id="client-whatsapp"></div>
                     <div role="tabpanel" class="tab-pane fade" id="client-projects"></div>
                     <div role="tabpanel" class="tab-pane fade" id="client-tasks"></div>
                     <div role="tabpanel" class="tab-pane fade" id="client-files"></div>

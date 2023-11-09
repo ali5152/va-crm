@@ -68,7 +68,7 @@ class Left_menu {
 
 
             if ($this->ci->login_user->is_admin || !get_array_value($this->ci->login_user->permissions, "do_not_show_projects")) {
-                $sidebar_menu["projects"] = array("name" => "projects", "url" => "projects/all_projects", "class" => "command");
+                $sidebar_menu["projects"] = array("name" => "projects", "url" => "applications/all_applications", "class" => "command");
             }
 
              if ($this->ci->login_user->is_admin || $access_client) {
@@ -129,20 +129,20 @@ class Left_menu {
 
             if (get_setting("module_estimate") && ($this->ci->login_user->is_admin || $access_estimate)) {
 
-                $prospects_submenu["estimates"] = array("name" => "estimate_list", "url" => "estimates", "class" => "file");
+                $prospects_submenu["estimates"] = array("name" => "estimate_list", "url" => "estimates", "class" => "trello");
 
                 if (get_setting("module_estimate_request")) {
-                    $prospects_submenu["estimate_requests"] = array("name" => "estimate_requests", "url" => "estimate_requests", "class" => "file");
-                    $prospects_submenu["estimate_forms"] = array("name" => "estimate_forms", "url" => "estimate_requests/estimate_forms", "class" => "file");
+                    $prospects_submenu["estimate_requests"] = array("name" => "estimate_requests", "url" => "estimate_requests", "class" => "trello");
+                    $prospects_submenu["estimate_forms"] = array("name" => "estimate_forms", "url" => "jot_forms/forms", "class" => "trello");
                 }
             }
 
             if (get_setting("module_proposal") && ($this->ci->login_user->is_admin || $access_proposal)) {
-                $prospects_submenu["proposals"] = array("name" => "proposals", "url" => "proposals", "class" => "file-text");
+                $prospects_submenu["proposals"] = array("name" => "proposals", "url" => "quotations", "class" => "file-text");
             }
 
             if (count($prospects_submenu)) {
-                $sidebar_menu["prospects"] = array("name" => "prospects", "url" => "estimates", "class" => "message-square", "submenu" => $prospects_submenu);
+                $sidebar_menu["prospects"] = array("name" => "prospects", "url" => "estimates", "class" => "trello", "submenu" => $prospects_submenu);
             }
 
 
@@ -319,7 +319,7 @@ class Left_menu {
             }
 
             if (!in_array("projects", $hidden_menu)) {
-                $sidebar_menu[] = array("name" => "projects", "url" => "projects/all_projects", "class" => "command");
+                $sidebar_menu[] = array("name" => "projects", "url" => "applications/all_applications", "class" => "command");
             }
 
             if (get_setting("module_contract") && !in_array("contracts", $hidden_menu)) {
@@ -327,11 +327,11 @@ class Left_menu {
             }
 
             if (get_setting("module_proposal") && !in_array("proposals", $hidden_menu)) {
-                $sidebar_menu[] = array("name" => "proposals", "url" => "proposals", "class" => "file-text");
+                $sidebar_menu[] = array("name" => "proposals", "url" => "quotations", "class" => "file-text");
             }
 
             if (get_setting("module_estimate") && !in_array("estimates", $hidden_menu)) {
-                $sidebar_menu[] = array("name" => "estimates", "url" => "estimates", "class" => "file");
+                $sidebar_menu[] = array("name" => "estimates", "url" => "estimates", "class" => "trello");
             }
 
             if (get_setting("module_subscription") && !in_array("subscriptions", $hidden_menu)) {
